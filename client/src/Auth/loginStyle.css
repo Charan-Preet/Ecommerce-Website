@@ -1,0 +1,13 @@
+.Error {
+  color: rgb(143, 34, 27);
+  background-color: rgb(252, 235, 226);
+}
+
+Error::before {
+  background-color: rgb(207, 74, 34); 
+}
+
+Error::after{
+  background-color: rgb(252, 235, 226);
+  border-color: rgb(249, 211, 197);
+}
