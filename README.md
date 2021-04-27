@@ -5,6 +5,8 @@
 
 [![cart.png](https://i.postimg.cc/L6mLS40f/cart.png)](https://postimg.cc/G9SHJRRh)
 
+[![Stripe.png](https://i.postimg.cc/CKLTJvMd/Stripe.png)](https://postimg.cc/3k6cxFvH)
+
 [![register.png](https://i.postimg.cc/3xgsvBFz/register.png)](https://postimg.cc/21S9pnJx)
 
 ## Features:
