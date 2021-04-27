@@ -13,6 +13,7 @@
 * Coustomer can add items to the cart storing them into local sotrage 
 * Mongodb atlas to save Registered users to the database
 * Password hasing beforing saving them into database
+* Stripe Payment Gateway Integration
 
 ## Technology Used: 
 * React 
