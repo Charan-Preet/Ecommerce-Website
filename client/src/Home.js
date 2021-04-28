@@ -88,7 +88,6 @@ export default function Layout() {
     <section className="flex flex-wrap justify-around center mw9">
       <img className="mt2 front image" src="https://i.postimg.cc/9Q4MsCh9/FRONTPAGE.jpg" />
       {displayCard()}
-      <a href='https://www.freepik.com/psd/banner'>Banner psd created by freepik - www.freepik.com</a>
       <NotificationContainer />
     </section>
   );
