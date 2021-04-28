@@ -1,6 +1,8 @@
 # Ecommerce-Website
 **[Live Demo](https://ecommerce-charanpreet.netlify.app/)**<br>
 
+[![frontpage.png](https://i.postimg.cc/nLn02Hg4/frontpage.png)](https://postimg.cc/hX3LPqSv)
+
 [![frontpage-of-website.png](https://i.postimg.cc/gjnDGSrQ/frontpage-of-website.png)](https://postimg.cc/MfJRDY7m)
 
 [![cart.png](https://i.postimg.cc/L6mLS40f/cart.png)](https://postimg.cc/G9SHJRRh)
