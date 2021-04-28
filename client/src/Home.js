@@ -27,9 +27,10 @@ export default function Layout() {
         await addToCart(item)
         NotificationManager.success('Added To Cart', "Success", 800)
       }
-      else
+      else {
         increaseCartItem(cartData.indexOf(existData[0]))
-      NotificationManager.success('Cart updated', "Success", 800)
+        NotificationManager.success('Cart updated', "Success", 800)
+      }
     }
   }
 
