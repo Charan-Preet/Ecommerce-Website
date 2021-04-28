@@ -6,6 +6,7 @@ import { StoreProvider } from "easy-peasy";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Navigation from "./Navbar";
 import Layout from "./Home";
+import test from './Test'
 import Footer from "./footer";
 import Login from "./Auth/Login";
 import Cart from './cart'
@@ -22,6 +23,7 @@ export default function App() {
             <Navigation />
             <Switch>
               <Route exact path={'/'} component={Layout} />
+              <Route exact path={'/test'} component={test} />
               <Route exact path={'/register'} component={Register} />
               <Route exact path={'/login'} component={Login} />
               <Route exact path={'/cart'} component={Cart} />

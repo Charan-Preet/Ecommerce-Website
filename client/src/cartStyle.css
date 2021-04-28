@@ -1,0 +1,24 @@
+#card {
+  position: relative;
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease-out;
+}
+
+#card:hover {
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
+    0 24px 46px var(--box-shadow-color);
+}
+.payment {
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.06);
+}
+
+#payment-button {
+  box-shadow: 2px 4px 8px 0 rgba(46, 61, 73, 0.2);
+}
+
+#payment-button:hover {
+  transition: all 0.3s ease;
+  box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
+    0 24px 46px var(--box-shadow-color);
+}

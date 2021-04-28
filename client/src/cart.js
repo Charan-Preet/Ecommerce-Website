@@ -2,6 +2,7 @@ import React from 'react'
 import { useStoreState, useStoreActions } from 'easy-peasy'
 import StripeCheckout from 'react-stripe-checkout'
 import { Link } from 'react-router-dom'
+import './cartStyle.css'
 
 export default function Cart() {
     const Items = useStoreState((state) => state.cartItems)
@@ -28,7 +29,7 @@ export default function Cart() {
             <div>
 
                 <section className="ph3 ph5-ns pv5">
-                    <article className="mw7 center br3 ba b--light-blue bg-lightest-blue">
+                    <article className="payment mw7 center br3 ba b--light-blue bg-lightest-blue">
                         <div className="dt-ns dt--fixed-ns w-100">
                             <div className="pa3 pa4-ns dtc-ns v-mid">
                                 <div>
@@ -37,7 +38,7 @@ export default function Cart() {
                             </div>
                             <div class="pa3 pa4-ns dtc-ns v-mid">
                                 <StripeCheckout>
-                                    <Link to="#" className="no-underline f6 tc db w-100 pv3 bg-animate bg-blue hover-bg-dark-blue white br2">Pay via Stripe</Link>
+                                    <Link to="#" id="payment-button" className="no-underline f6 tc db w-100 pv3 bg-animate bg-blue hover-bg-dark-blue white br2">Pay via Stripe</Link>
                                 </StripeCheckout>
                             </div>
                         </div>
@@ -48,7 +49,7 @@ export default function Cart() {
 
                 <div className="flex flex-wrap justify-around center mw9">
                     {Items.map((item, idx) => (
-                        <article className="w-30-l pa2 mr2" key={idx}>
+                        <article className="w-30-l pa2 mr2 mb2 mt0" key={idx} id="card">
                             <img src={item.url} className="db w-100 br2 br--top" alt="Photo of a kitten looking menacing." />
                             <div className="pa2 ph3-ns pb3-ns">
                                 <div className="dt w-100 mt1">

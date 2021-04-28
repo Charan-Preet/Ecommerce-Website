@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
+import "./HomeStyle.css"
 import Axios from "axios";
-import { Link,useHistory } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { useStoreState, useStoreActions } from 'easy-peasy'
+import 'react-notifications/lib/notifications.css';
+import { NotificationContainer, NotificationManager } from 'react-notifications';
 
 export default function Layout() {
   const [items, setItmes] = useState([])
@@ -11,22 +14,27 @@ export default function Layout() {
   let existData
   const history = useHistory()
 
-  function checkCart(item) {
-    if (cartData.length == 0)
-      addToCart(item)
+  const checkCart = async (item) => {
+    if (cartData.length == 0) {
+      await addToCart(item)
+      NotificationManager.success('Added To Cart', "Success", 800)
+    }
     else {
       existData = cartData.filter(data => {
         return data._id == item._id
       })
-      if (existData === -1 || existData === undefined || existData.length === 0)
-        addToCart(item)
+      if (existData === -1 || existData === undefined || existData.length === 0) {
+        await addToCart(item)
+        NotificationManager.success('Added To Cart', "Success", 800)
+      }
       else
         increaseCartItem(cartData.indexOf(existData[0]))
+      NotificationManager.success('Cart updated', "Success", 800)
     }
   }
 
-  const buyNow = async(item) => {
-    await checkCart(item)
+  const buyNow = async (item) => {
+    checkCart(item)
     history.push('/cart')
   }
   //    Getting Items Data from mongodb data base using Axios 
@@ -45,7 +53,7 @@ export default function Layout() {
     if (!items.length) return null;
 
     return items.map((item, idx) => (
-      <article className="w-30-l pa2 mr2" key={idx}>
+      <article className="w-30-l pa2 mr2 mt2 mb3" key={idx} id="card">
         <img src={item.url} className="db w-100 br2 br--top" alt="Photo of a kitten looking menacing." />
         <div className="pa2 ph3-ns pb3-ns">
           <div className="dt w-100 mt1">
@@ -60,7 +68,7 @@ export default function Layout() {
           <Link
             className="f6 link dim ba bw2 ph3 pv2 mb2 dib near-black"
             to="#0"
-            onClick={() =>buyNow(item) }
+            onClick={() => buyNow(item)}
           >
             Buy Now
           </Link>
@@ -78,7 +86,10 @@ export default function Layout() {
 
   return (
     <section className="flex flex-wrap justify-around center mw9">
+      <img className="mt2 front image" src="https://i.postimg.cc/9Q4MsCh9/FRONTPAGE.jpg" />
       {displayCard()}
+      <a href='https://www.freepik.com/psd/banner'>Banner psd created by freepik - www.freepik.com</a>
+      <NotificationContainer />
     </section>
   );
 }

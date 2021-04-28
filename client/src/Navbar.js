@@ -3,6 +3,8 @@ import { useStoreState } from 'easy-peasy'
 import { Link } from 'react-router-dom'
 import AuthContext from './context/AuthContext'
 import LogOutBtn from './Auth/LogOutBtn'
+import { NotificationContainer, NotificationManager } from 'react-notifications';
+
 
 export default function Navigation() {
     const count = useStoreState(state => state.cartItems)
@@ -26,7 +28,7 @@ export default function Navigation() {
                     <Link className="link white-90 f6 f5-l dib mr3 mr4-l" to='/' title="Home">Home</Link>
                     <a className="link white-90 f6 f5-l dib mr3 mr4-l" href="#" title="How it Works">How it Works</a>
                     <Link className="link white-90 f6 f5-l dib mr3 mr4-l" to='/cart'>Cart({count.length})</Link>
-                    <LogOutBtn />
+                    <LogOutBtn/>
                 </div>
             }
         </nav>
