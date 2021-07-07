@@ -54,7 +54,7 @@ export default function Register() {
               Email
             </label>
             <input
-              className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+              className="br4 pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
               type="email"
               name="email-address"
               id="email-address"
@@ -70,7 +70,7 @@ export default function Register() {
               Password
             </label>
             <input
-              className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+              className="br4 b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
               type="password"
               name="password"
               id="password"
@@ -82,7 +82,7 @@ export default function Register() {
               Re-Enter the password
             </label>
             <input
-              className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+              className="br4 b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
               type="password"
               name="password"
               id="password"
@@ -97,7 +97,7 @@ export default function Register() {
         </fieldset>
         <div className="">
           <input
-            className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
+            className="br4 b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
             type="submit"
             value="Register"
           />

@@ -11,8 +11,8 @@ export default function Layout() {
   const cartData = useStoreState((state) => state.cartItems)
   const addToCart = useStoreActions(actions => actions.addToCart)
   const increaseCartItem = useStoreActions(actions => actions.increaseCartItem)
-  let existData
   const history = useHistory()
+  let existData
 
   const checkCart = async (item) => {
     if (cartData.length == 0) {
@@ -54,7 +54,7 @@ export default function Layout() {
     if (!items.length) return null;
 
     return items.map((item, idx) => (
-      <article className="w-30-l pa2 mr2 mt2 mb3" key={idx} id="card">
+      <article className=" br3 sans-serif w-30-l pa2 mr2 mt2 mb3" key={idx} id="card">
         <img src={item.url} className="db w-100 br2 br--top" alt="Photo of a kitten looking menacing." />
         <div className="pa2 ph3-ns pb3-ns">
           <div className="dt w-100 mt1">
@@ -67,14 +67,14 @@ export default function Layout() {
           </div>
           <p className="f6 lh-copy measure mt2 mid-gray">{item.description}</p>
           <Link
-            className="f6 link dim ba bw2 ph3 pv2 mb2 dib near-black"
+            className="br4 f6 link dim ba bw2 ph3 pv2 mb2 dib near-black"
             to="#0"
             onClick={() => buyNow(item)}
           >
             Buy Now
           </Link>
           <Link
-            className="f6 link dim ba bw2 ph3 pv2 mb2 ml2 dib dark-blue"
+            className="br4 f6 link dim ba bw2 ph3 pv2 mb2 ml2 dib dark-blue"
             href="#0"
             onClick={() => checkCart(item)}
           >
@@ -87,7 +87,7 @@ export default function Layout() {
 
   return (
     <section className="flex flex-wrap justify-around center mw9">
-      <img className="mt2 front image" src="https://i.postimg.cc/9Q4MsCh9/FRONTPAGE.jpg" />
+      <img className="grow br4 mt2 front image" src="https://i.postimg.cc/9Q4MsCh9/FRONTPAGE.jpg" />
       {displayCard()}
       <NotificationContainer />
     </section>

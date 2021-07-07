@@ -26,7 +26,7 @@ export default function Cart() {
     const displayCard = () => (Items.length === 0) ? (<h1 className='tc h5'>Add Items to Cart</h1>)
         : (
             // Stripe Payment Gateway
-            <div>
+            <div className='sans-serif'>
 
                 <section className="ph3 ph5-ns pv5">
                     <article className="payment mw7 center br3 ba b--light-blue bg-lightest-blue">
@@ -38,7 +38,7 @@ export default function Cart() {
                             </div>
                             <div class="pa3 pa4-ns dtc-ns v-mid">
                                 <StripeCheckout>
-                                    <Link to="#" id="payment-button" className="no-underline f6 tc db w-100 pv3 bg-animate bg-blue hover-bg-dark-blue white br2">Pay via Stripe</Link>
+                                    <Link to="#" id="payment-button" className="no-underline f6 tc db w-100 pv3 bg-animate bg-blue hover-bg-dark-blue white br3">Pay via Stripe</Link>
                                 </StripeCheckout>
                             </div>
                         </div>
@@ -49,7 +49,7 @@ export default function Cart() {
 
                 <div className="flex flex-wrap justify-around center mw9">
                     {Items.map((item, idx) => (
-                        <article className="w-30-l pa2 mr2 mb2 mt0" key={idx} id="card">
+                        <article className="br4 w-30-l pa2 mr2 mb2 mt0" key={idx} id="card">
                             <img src={item.url} className="db w-100 br2 br--top" alt="Photo of a kitten looking menacing." />
                             <div className="pa2 ph3-ns pb3-ns">
                                 <div className="dt w-100 mt1">
@@ -75,7 +75,7 @@ export default function Cart() {
                                         </div>
                                     </div>
                                     <div>
-                                        <Link class="f6 link dim ph3 pv2 mb2 dib white bg-light-purple" onClick={() => removeFromCart(item._id)}>Remove Item</Link>
+                                        <Link class="f6 link dim ph3 pv2 mb2 dib white bg-light-purple br4 shadow-3" onClick={() => removeFromCart(item._id)}>Remove Item</Link>
                                     </div>
                                 </div>
                             </div>
