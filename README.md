@@ -13,10 +13,10 @@
 
 ## Features:
 * ### Full-fledged Ecommerce Website with Features:
-* Authentication using Json web token (JWT) storing them in httponly cookies 
-* Coustomer can add items to the cart storing them into local sotrage 
-* Mongodb atlas to save Registered users to the database
-* Password hasing beforing saving them into database
+* Authentication using Json web token (JWT) storing them in httponly cookie 
+* Coustomer can add items to the cart storing them into local storage 
+* Mongodb to save Registered users to the database
+* Password hashing before saving into the database
 * Stripe Payment Gateway Integration
 
 ## Technology Used: 
