@@ -27,4 +27,3 @@
 * Mongodb Atlas
 * Tachyons
 
-### Created By CharanPreet Singh,Gourav Mohan and Arun Baigra
