@@ -48,7 +48,7 @@ export default function Layout() {
       .catch((err) => {
         console.log(err);
       });
-  });
+  },[]);
 
   function displayCard() {
     if (!items.length) return null;
